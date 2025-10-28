@@ -1737,7 +1737,7 @@ export function handleSemicolonPrePostOps(fileMetadata: TablesWtFullQuery) {
     }
 
     if (!icrementalPreOpsEndsWithSemicolon && fileMetadata.queryMeta.incrementalPreOpsQuery !== "") {
-        fileMetadata.queryMeta.incrementalPreOpsQuery = fileMetadata.queryMeta.incrementalPreOpsQuery.trimEnd() + ";" + "\n";
+        fileMetadata.queryMeta.incrementalPreOpsQuery = fileMetadata.queryMeta.incrementalPreOpsQuery.trimEnd() + "\n";
     }
 
     if (!postOpsEndsWithSemicolon && fileMetadata.queryMeta.postOpsQuery !== "") {
