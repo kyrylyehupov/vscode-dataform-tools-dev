@@ -1728,12 +1728,6 @@ export async function runMultipleFilesFromSelection(workspaceFolder: string, sel
 }
 
 export function handleSemicolonPrePostOps(fileMetadata: TablesWtFullQuery) {
-    fileMetadata.queryMeta.preOpsQuery = fileMetadata.queryMeta.preOpsQuery.trimEnd();
-    fileMetadata.queryMeta.incrementalPreOpsQuery = fileMetadata.queryMeta.incrementalPreOpsQuery.trimEnd();
-    // leave post-ops logic as-is if you still want it there
-    if (!/;\s*$/.test(fileMetadata.queryMeta.postOpsQuery) && fileMetadata.queryMeta.postOpsQuery !== "") {
-        fileMetadata.queryMeta.postOpsQuery = fileMetadata.queryMeta.postOpsQuery.trimEnd() + ";" + "\n";
-    }
     return fileMetadata;
 }
 
