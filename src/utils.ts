@@ -1733,11 +1733,11 @@ export function handleSemicolonPrePostOps(fileMetadata: TablesWtFullQuery) {
     const postOpsEndsWithSemicolon = /;\s*$/.test(fileMetadata.queryMeta.postOpsQuery);
 
     if (!preOpsEndsWithSemicolon && fileMetadata.queryMeta.preOpsQuery !== "") {
-        fileMetadata.queryMeta.preOpsQuery = fileMetadata.queryMeta.preOpsQuery.trimEnd() + "\n";
+        fileMetadata.queryMeta.preOpsQuery = fileMetadata.queryMeta.preOpsQuery.trimEnd();
     }
 
     if (!icrementalPreOpsEndsWithSemicolon && fileMetadata.queryMeta.incrementalPreOpsQuery !== "") {
-        fileMetadata.queryMeta.incrementalPreOpsQuery = fileMetadata.queryMeta.incrementalPreOpsQuery.trimEnd() + "\n";
+        fileMetadata.queryMeta.incrementalPreOpsQuery = fileMetadata.queryMeta.incrementalPreOpsQuery.trimEnd();
     }
 
     if (!postOpsEndsWithSemicolon && fileMetadata.queryMeta.postOpsQuery !== "") {
