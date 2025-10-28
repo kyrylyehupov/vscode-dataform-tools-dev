@@ -12,7 +12,7 @@ export const assertionQueryOffset = 4;
 export const windowsDataformCliNotAvailableErrorMessage = "'dataform.cmd' is not recognized as an internal or external command";
 export const linuxDataformCliNotAvailableErrorMessage = "dataform: command not found";
 export const costInPoundsForOneGb = 0.005;
-export const bigQuerytimeoutMs = 20000;
+export const bigQuerytimeoutMs = 1800000;
 
 export const errorDenylist = ["CREATE TEMPORARY FUNCTION statements must be followed by an actual query."];
 

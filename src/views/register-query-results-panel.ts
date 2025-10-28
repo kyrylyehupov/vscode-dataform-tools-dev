@@ -7,7 +7,7 @@ import { cancelBigQueryJob, queryBigQuery } from '../bigqueryRunQuery';
 import { QueryWtType } from '../types';
 import { Job } from '@google-cloud/bigquery';
 
-function waitForBigQueryJob(timeout = 20000): Promise<Job> { // default timeout 20 seconds
+function waitForBigQueryJob(timeout = 1800000): Promise<Job> { // default timeout 30 minutes
   return new Promise((resolve, reject) => {
     const start = Date.now();
 
